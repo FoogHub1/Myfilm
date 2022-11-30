@@ -1,0 +1,32 @@
+body {
+    background: grey;
+}
+
+.top-menu {
+    width: 685px;
+    height: 80px;
+    position: fixed;
+}
+.top-menu ul li {
+    list-style: none;
+    text-align: center;
+}
+.top-menu ul li a {
+    display: block;
+    width: 171px;
+    text-decoration: none;
+    font-family:  "Exo2-Medium", sans-serif;
+    font-size: 17px;
+    color: white;
+    height: 55px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.top-menu ul li a:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    background: #00ADE4;
+}
