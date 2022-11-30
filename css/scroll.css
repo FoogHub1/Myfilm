@@ -35,13 +35,3 @@
 	opacity: 1;
     background-color: #337AB7;
 }
-
-@-ms-viewport { 
- width: device-width;
-}
-@-o-viewport { 
- width: device-width;
-}
-@viewport { 
- width: device-width;
-}
