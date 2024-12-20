@@ -1,615 +1,875 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Фильмы</title>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/block.css">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/scroll.css">
-  <link rel="stylesheet" type="text/css" href="css/search.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Сделал х2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="css/block.css">
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+  </head>
+  <body>
 
-</head>
-
-<body>
-
-
-<form>
-  <input type="text" id="text-to-find" placeholder="Искать здесь...">
-  <button onclick="javascript: FindOnPage('text-to-find'); return false;" type="submit"></button>
-</form>
-
-</br>
-</br>
-</br>
-
-  <div id="block-body">
-       <header>
-         <div class="top-menu">
-           <ul>
-               <li><a href="#yes">Просмотренно</a></li>
-
-               <li><a href="#no">В планах</a></li>
-           </ul>  
-         </div> 
-       </header>
-       <div class="block-body"></div>      
-  </div>
+										<!-- Прелоадер -->
+										<div class="preloader">
+										  <div class="preloader__image"></div>
+										</div>
+										<!-- Прелоадер -->
 
 
 
+    <div class="wrapper">
+          <nav class="clearfix">
+              <ul class="clearfix">
+                  <li><a href="#" onclick="openPage('looked')">Посмотрел</a></li>
+                  <li><a href="#" onclick="openPage('nolooked')">Не смотрел</a></li>
+                  <li><a href="#" onclick="openPage('advise')">Советую</a></li>
+                  <li><a href="#" onclick="openPage('noadvise')">Не советую</a></li>
+                  <li><a href="#" onclick="openPage('series')">Сериалы</a></li>
+                  <li><a href="#" onclick="openPage('creator')">Создатель</a></li>   
+              </ul>
+              <a class="menu1" href="#" id="pull">Меню</a>
+          </nav>
 
-<div class="block">
- <div id="yes"></div>
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/anna.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="https://291122.lordfilm.black/8830-film-anna-2019.html" class="add-to-cart">Перейти</a>
+      <main class="main">
 
-      </div>
+
+        <!-- смотрел -->
+        <div class="shop-list" id="looked">
+
+
+        					<!-- А -->
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/anna.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://291122.lordfilm.black/8830-film-anna-2019.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Анна</h3>
+              <div class="price">Типо русская девушка мега киллер, работает на две спец. службы, считается мега крутой.
+              </br></br></br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/antivirys.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lp-22film.lordfilm6.zone/18115-antivirus-2012.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Антивирус</h3>
+              <div class="price">Очень странная вселенная едят "мясо" знаменитостей, хотят болеть тем же что и их звезды, мега странные фанаты, и один из продавцов этой хрени, облажался и умрет.
+               </div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/cyber.jpeg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf22.lordfilm.lu/13679-film-apgrejd-2018.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Апгрейд</h3>
+              <div class="price">Ну неожиданная концовка, но из-за этого весь сюжет ломается, а так чел ломает позвоночник, но есть друг который вылечил а тот стал играть в супергероя. </br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/armia.jpeg">
+              </div>
+              <div class="loop-action">
+                <a href="https://2022-h20.lordfilm0.com/films/34466-armija-vorov-16-06.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Армия воров</h3>
+              <div class="price">Думал крутой фильм про взломщика, а оказался не знаю, ужасный фильм, не знаю зачем продолжил смотреть, а так там чел, который взламывает сейфы лучше всех.</div>
+           </div>
+          </div>
+          		<!-- А -->
+
+          		<!-- Б -->
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/babadook.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf22.lordfilm.lu/9456-film-babaduk-2014.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бабадук</h3>
+              <div class="price">Ну вот на авише что написано, представьте полностью противополженное, и если хотите посмотреть фильм ужасов, то вам не сюда.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/beglez.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf25.lordfilm.lu/8855-film-beguschij-po-lezviju-2049-2017.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бегущий по лезвию 2049</h3>
+              <div class="price">Райан Гослинг, если вам этого не достаточно то, можете посмотреть, в принципе фильм неплохой, есть сюжетные повороты и смотрится легко.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/whitemen.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://p.mgfilm.ru/filmy/7090-belyj-paren-rik-white-boy-rick-2018.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Белый парень Рик</h3>
+              <div class="price"> Я пытался посмотреть Джетельмены, но почему-то мне выдало этот фильм, он хорош мне понравился, так еще и на реальных событиях снят фильм, там про наркотики.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/infinity.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://p.mgfilm.ru/filmy/41333-beskonechnost-2021.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бесконечность</h3>
+              <div class="price">Там кароче прикол в том, что существует реинкорнация и челы перерождаются постоянно и чето там они ищут, ну и конечно есть враги, хз не понравился кароче.</br></div>
+           </div>
+          </div>
+
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/yblydki.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf25.lordfilm.lu/4279-film-besslavnye-ubljudki-2009.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бесславные ублюдки</h3>
+              <div class="price">Ну хз, мне понравился, но тамбыл моментик один в баре, он не сильно мне понравился из-за этого есть сомнения по фильму, а так есть смешные штуки.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/bladshot.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://p.mgfilm.ru/filmy/28240-bladshot-bloodshot-2020.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бладшот</h3>
+              <div class="price">Да... такого я ещё не видел, челу стирают память дают цель он убивает, гениально, но потом уже он всех убил, ну что Вин дизель же.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/brother.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf25.lordfilm.lu/10816-film-bratja-iz-grimsbi-2016.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Братья из Гримбси</h3>
+              <div class="price">Смесь говна и палок, крутой киллер и его брат (бездарь), но в итоге всё получется, концовка вообще братская, сели жопами на ракеты.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/brys.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://p.mgfilm.ru/filmy/18558-brjus-vsemoguschij-bruce-almighty-2003.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Брюс всемогущий</h3>
+              <div class="price">Хороший фильм с Джими керри, фильм чему-то да научит, не помню чему, но это разве не повод посмотреть его?</br></br></div>
+           </div>
+          </div>
+          		<!-- Б -->
+
+
+          		<!-- В -->
+        </div>
+        <!-- смотрел -->
+
+
+        <!-- не смотерел -->
+        <div class="furniture" id="nolooked">
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/babadook.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf22.lordfilm.lu/9456-film-babaduk-2014.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бабадук</h3>
+              <div class="price">Ну вот на авише что написано, представьте полностью противополженное, и если хотите посмотреть фильм ужасов, то вам не сюда.</br></div>
+           </div>
+          </div>
+        </div>
+        <!-- не смотерел -->
+
+
+        <!--советую -->
+        <div class="furniture" id="advise">
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/star.jpeg">
+              </div>
+              <div class="loop-action">
+                <a href="https://rt.bongacams1.com/sondja" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+              </div>
+              <h3 class="product-title">Сонечка</h3>
+              <div class="price">Более известная как похитительница сердец. Воровка одним словом, требует наказания</br></div>
+           </div>
+          </div>
+        </div>
+        <!--советую -->
+
+
+        <!-- не советую -->
+        <div class="furniture" id="noadvise">
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/babadook.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf22.lordfilm.lu/9456-film-babaduk-2014.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бабадук</h3>
+              <div class="price">Ну вот на авише что написано, представьте полностью противополженное, и если хотите посмотреть фильм ужасов, то вам не сюда.</br></div>
+           </div>
+          </div>
+        </div>
+        <!-- не советую -->
+
+
+        <!-- сериалы -->
+        <div class="furniture" id="series">
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/brigada.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://smotrim.ru/brand/22965" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Бригада</h3>
+              <div class="price">Пацанский сериал про бандитов, но опять же чем дальше по сериям тем ну уже не очень, но глянуть надо.</br></br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/vek.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://serialry.online/1688-velikolepnyj-vek-1-2-3-4-sezon-vse-serii-podrjad.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Великолепный век</h3>
+              <div class="price">Ну по приколу начал смотреть с мамой твоей, втянулся и продолжил, в принципе глянуть можно, всех хотят быть султаном и быть с султаном.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/vosem.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://ctc.ru/projects/serials/vosmidesyatye/" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Восьмиесятые</h3>
+              <div class="price">Эх вспомнил молодость свою конечно, ну а так сериал про 80ые, есть смешные и грустные моменты, вставки с цитатами</br></div>
+           </div>
+          </div>
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/desyt.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf25.lordfilm.lu/21454-serial-desjatoe-korolevstvo.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Десятое королевство</h3>
+              <div class="price">Смотрел очень давно на диске, пересматривал даже, сказочный мир ведьм и принцесс, банальщина, но крутая, глянул ещё с кем нибудь.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/schol.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://ctc.ru/projects/serials/zakrytaya-shkola/" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Закрытая школа</h3>
+              <div class="price">Вообще не помню что там было, чето дети с большим IQ и над ними эксперементы ставили, потом какой-то вирус был и гномик они тебя убьют.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/cyberstalker.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://start.ru/watch/kiberstalker/season-1" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Киберсталкер</h3>
+              <div class="price">Гений хакер взломал всех и следит для своей выгоды, также пытается всех спасти, а других сдать, но там есть дыра сюжетная, но ниче норм.</br></div>
+           </div>
+          </div>
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/robot.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://love-robots.online/" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Любовь, смерть и роботы</h3>
+              <div class="price">Один из крутых мульти-сериалов, серии не связанны между собой, но и есть пару сюжетных, также есть очень крутые смысловые и нарисованные серии.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/ostrie.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://www.amediateka.ru/watch/series_24488_ostryie-kozyirki/season_1_24489" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Острые козырьки</h3>
+              <div class="price">Сериал про Томаса Шелби, первые сезоны очень хороши, а вот дальше не знаю смотреть не стал, но чел мега крут.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/rikmorty.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://rick-i-morty.online/?ref=ratrating.com" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Рик и морти</h3>
+              <div class="price">Один из крутых мульти-сериалов, сам сириал имеет сюжет, а вот серии 50/50, смотреть лучше всего с кем-то, много смешных штук.</br></br></div>
+           </div>
+          </div>
+
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/sneg.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://lordserial.link/zarubezhnye-serials/183-skvoz-sneg.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span></span>
+                <span></span>  
+                <span></span>    
+                <span class="active"></span>  
+                <span></span>    
+                <span class="active"></span>
+              </div>
+              <h3 class="product-title">Сквозь снег</h3>
+              <div class="price">Начал смотреть с девушкой, понравилось, в принципе мир будущего и как он развивается в закрытом пространстве, но к сожалению не могу досмотреть.</br></div>
+           </div>
+          </div>
+
+
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/yen.jpg">
+              </div>
+              <div class="loop-action">
+                <a href="https://lordserialx.fun/167-uein-z49.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span></span>  
+                <span></span>    
+                <span></span>
+              </div>
+              <h3 class="product-title">Уэйн</h3>
+              <div class="price">Из-за постановки драк мне не понравилось, а так сериал крутой, юморной, но некоторые моменты смущают.</br></br></div>
+           </div>
+          </div>
+
+        </div>
+         <!-- сериалы -->
+
+
+
+	       <!-- Создатель -->
+        <div class="furniture" id="creator">
+          <div class="border">
+            <div class="wrap">
+              <div class="product-wrap">
+                <img src="img/zeus.webp">
+              </div>
+              <div class="loop-action">
+                <a href="https://lf22.lordfilm.lu/9456-film-babaduk-2014.html" class="add-to-cart">Перейти</a>
+
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating-mini">
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>  
+                <span class="active"></span>    
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+              </div>
+              <h3 class="product-title">Гений мысли</h3>
+              <div class="price">Лучший на этом свете и не на этом.</div>
+           </div>
+          </div>
+        </div>
+         <!-- Создатель -->
+
+
+
+      </main>
     </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span class="active"></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Анна</h3>
-      <div class="price">Типо русская девушка мега киллер, работает на две спец. службы, считается мега крутой.
-      </br></br></br></br></div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/antivirys.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="https://lp-22film.lordfilm6.zone/18115-antivirus-2012.html" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span class="active"></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Антивирус</h3>
-      <div class="price">Очень странная вселенная едят "мясо" знаменитостей, хотят болеть тем же что и их звезды, мега странные фанаты, и один из продавцов этой хрени, облажался и умрет.
-       </div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/cyber.jpeg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="https://lf22.lordfilm.lu/13679-film-apgrejd-2018.html" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span class="active"></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Апгрейд</h3>
-      <div class="price">Ну неожиданная концовка, но из-за этого весь сюжет ломается, а так чел ломает позвоночник, но есть друг который вылечил а тот стал играть в супергероя. </br></br></div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span></span>    
-        <span class="active"></span>  
-        <span></span>    
-        <span class="active"></span>
-        <span></span>  
-        <span class="active"></span>    
-        <span></span>  
-        <span class="active"></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Настя ake Ася</h3>
-      <div class="price">Посмотрел бы, но не показывает</br></br></br></br></br></br></div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/armia.jpeg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="https://2022-h20.lordfilm0.com/films/34466-armija-vorov-16-06.html" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Армия воров</h3>
-      <div class="price">Думал крутой фильм про взломщика, а оказался не знаю, ужасный фильм, не знаю зачем продолжил смотреть, а так там чел, который взламывает сейфы лучше всех.</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/babadook.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="https://lf22.lordfilm.lu/9456-film-babaduk-2014.html" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span class="active"></span>  
-        <span class="active"></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Бабадук</h3>
-      <div class="price">Ну вот на авише что написано, представьте полностью противополженное, и если хотите посмотреть фильм ужасов, то вам не сюда.</br></br></div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-    <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Опа</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-  <div class="border">
-    <div class="wrap">
-      <div class="product-wrap">
-        <a href=""><img src="img/slot.jpg"></a>
-      </div>
-      <div class="loop-action">
-        <a href="" class="add-to-cart">Перейти</a>
-
-      </div>
-    </div>
-    <div class="product-info">
-      <div class="rating-mini">
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-        <span></span>  
-        <span></span>    
-        <span></span>  
-        <span></span>    
-        <span></span>
-      </div>
-      <h3 class="product-title">Маленькое черное платье</h3>
-      <div class="price">&#8381; 1999</div>
-   </div>
-  </div>
-
-
-
-</div>
-</br>
-
-<script type="text/javascript" src="js/search.js"></script>
-<script type="text/javascript" src="js/scroll.js"></script>
-
-</body>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/loader.js"></script>
+    <script type="text/javascript" src="js/open.js"></script>
+  </body>
 </html>
